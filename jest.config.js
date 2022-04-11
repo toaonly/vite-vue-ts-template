@@ -1,4 +1,24 @@
 module.exports = {
+  globals: {
+    'ts-jest': {
+      babelConfig: {
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: {
+                node: 'current',
+              },
+            },
+          ],
+        ],
+        plugins: ['@vue/babel-plugin-jsx'],
+      },
+    },
+  },
+
+  coverageReporters: ['text', 'lcov', 'json-summary'],
+
   preset: 'ts-jest',
 
   transform: {

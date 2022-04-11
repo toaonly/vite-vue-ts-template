@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit -p ./tsconfig.prod.json && vite build",
     "preview": "vite preview",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx,.vue src/"
@@ -16,6 +16,7 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "@rollup/plugin-alias": "^3.1.9",
     "@types/jest": "^27.4.1",
     "@types/lodash-es": "^4.17.6",
@@ -34,6 +35,7 @@
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.12",
+    "postcss-url": "^10.1.3",
     "rollup-plugin-analyzer": "^4.0.0",
     "sass": "^1.49.11",
     "tailwindcss": "^3.0.23",
@@ -41,6 +43,7 @@
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
     "vite-plugin-eslint": "^1.3.0",
+    "vite-svg-loader": "^3.2.0",
     "vue-tsc": "^0.29.8"
   }
 }

@@ -5,20 +5,28 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="text-center">
+    <div class="logo" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+div.logo {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-image: url('/assets/logo.png');
+  animation: rotation infinite 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 </style>
