@@ -18,7 +18,11 @@
       "jsx": true
     }
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
+    "prettier/prettier": "off",
     "semi": [
       "error",
       "never"
