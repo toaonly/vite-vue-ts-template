@@ -7,7 +7,7 @@ describe('HelloWorld.vue', () => {
     const wrapper = mount(HelloWorld, {
       props: {
         msg,
-      }
+      },
     })
     expect(wrapper.text()).toMatch(msg)
   })
