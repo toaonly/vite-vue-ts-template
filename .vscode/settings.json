@@ -1,6 +1,9 @@
 {
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
