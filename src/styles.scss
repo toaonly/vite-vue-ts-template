@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 body {
+  @apply bg-stone-100 dark:bg-gray-800;
+  @apply text-gray-800 dark:text-stone-100;
+  @apply transition-colors;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Noto Sans KR', sans-serif;
