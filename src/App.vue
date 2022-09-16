@@ -13,5 +13,14 @@
       About
     </router-link>
   </div>
+  <div class="text-lg py-4 text-center border-t border-b border-gray-400 dark:border-stone-400">
+    count : {{ count }}
+  </div>
   <router-view />
 </template>
+
+<script setup  lang="ts">
+import { useCounterStore } from './store'
+
+const { count } = $(useCounterStore())
+</script>
