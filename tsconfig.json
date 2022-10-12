@@ -15,10 +15,12 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{
+  "references": [
+    {
       "path": "./tsconfig.node.json"
-    }]
+    }
+  ]
 }
