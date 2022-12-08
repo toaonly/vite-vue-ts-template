@@ -19,8 +19,8 @@ export default defineConfig({
     }),
     vue({
       reactivityTransform: true,
-    }),
-    vueJsx(),
+    }) as any,
+    vueJsx() as any,
   ],
   test: {
     exclude: [...configDefaults.exclude],
