@@ -1,26 +1,17 @@
-import alias from '@rollup/plugin-alias'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import path from 'path'
 import { configDefaults, defineConfig } from 'vitest/config'
-
-const projectRootDir = path.resolve(__dirname)
-const resolve = (p: string) => path.resolve(projectRootDir, p)
+import { configDefaults as viteConfigDefaults } from './vite/config'
 
 export default defineConfig({
+  resolve: {
+    alias: [...viteConfigDefaults.resolve.alias],
+  },
   plugins: [
-    alias({
-      entries: [
-        {
-          find: '@',
-          replacement: resolve('src'),
-        },
-      ],
-    }),
     vue({
       reactivityTransform: true,
-    }) as any,
-    vueJsx() as any,
+    }),
+    vueJsx(),
   ],
   test: {
     exclude: [...configDefaults.exclude],
