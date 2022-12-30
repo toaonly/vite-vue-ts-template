@@ -5,6 +5,7 @@ import { defineConfig, loadEnv } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import svgLoader from 'vite-svg-loader'
 import { configDefaults } from './vite/config'
+import { htmlPlugin } from './vite/plugins'
 
 // https://vitejs.dev/config/
 // @ts-ignore
@@ -31,6 +32,7 @@ export default defineConfig(({ mode }) => {
         reactivityTransform: true,
       }),
       vueJsx(),
+      htmlPlugin(),
     ],
   }
 })
