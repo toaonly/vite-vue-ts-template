@@ -1,5 +1,3 @@
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 import analyze from 'rollup-plugin-analyzer'
 import { defineConfig, loadEnv } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
@@ -28,11 +26,8 @@ export default defineConfig(({ mode }) => {
       eslintPlugin({
         cache: false,
       }),
-      vue({
-        reactivityTransform: true,
-      }),
-      vueJsx(),
       htmlPlugin(),
+      ...configDefaults.plugins,
     ],
   }
 })
