@@ -18,15 +18,10 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "off",
-    "semi": [
-      "error",
-      "never"
-    ],
+    "semi": ["error", "never"],
     "quotes": [
       "error",
       "single",
@@ -47,26 +42,11 @@
         "ignoreRegExpLiterals": true
       }
     ],
-    "max-depth": [
-      "error",
-      4
-    ],
+    "max-depth": ["error", 4],
     "vue/script-setup-uses-vars": "error",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "vue/require-default-prop": "off"
   },
-  "globals": {
-    "defineProps": "readonly",
-    "defineEmits": "readonly",
-    "defineExpose": "readonly",
-    "withDefaults": "readonly",
-    "$": "readonly",
-    "$$": "readonly",
-    "$ref": "readonly",
-    "$computed": "readonly",
-    "$shallowRef": "readonly",
-    "$customRef": "readonly",
-    "$toRef": "readonly"
-  }
+  "globals": {}
 }

@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue'
+import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
 import path from 'path'
 import type { Alias, PluginOption } from 'vite'
 
@@ -15,9 +16,5 @@ export const configDefaults = {
     ] as Alias[],
   },
 
-  plugins: [
-    vue({
-      reactivityTransform: true,
-    }),
-  ] as PluginOption[],
+  plugins: [vue(), ReactivityTransform()] as PluginOption[],
 }
