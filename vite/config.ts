@@ -1,5 +1,5 @@
 import vue from '@vitejs/plugin-vue'
-import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
+import VueMacros from 'unplugin-vue-macros/vite'
 import path from 'path'
 import type { Alias, PluginOption } from 'vite'
 
@@ -16,5 +16,11 @@ export const configDefaults = {
     ] as Alias[],
   },
 
-  plugins: [vue(), ReactivityTransform()] as PluginOption[],
+  plugins: [
+    VueMacros({
+      plugins: {
+        vue: vue(),
+      },
+    }),
+  ] as PluginOption[],
 }
