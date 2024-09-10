@@ -1,15 +1,3 @@
-<template>
-  <div class="text-center">
-    <div class="logo" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    <div>
-      <button @click="theme = isDark ? 'light' : 'dark'">
-        To {{ isDark ? 'light' : 'dark' }}
-      </button>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -24,7 +12,19 @@ watch(() => theme, () => {
 })
 </script>
 
-<style lang="scss" scoped>
+<template>
+  <div class="text-center">
+    <div class="logo" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <div>
+      <button @click="theme = isDark ? 'light' : 'dark'">
+        To {{ isDark ? 'light' : 'dark' }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<style scoped>
 div.logo {
   display: inline-block;
   width: 200px;

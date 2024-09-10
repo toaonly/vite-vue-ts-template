@@ -1,26 +1,6 @@
-<template>
-  <div class="text-center">
-    About Page
-    <br>
-    <br>
-    <button @click="back">
-      Back
-    </button>
-    <div class="my-2 flex gap-2 justify-center">
-      <button @click="increase">
-        Increase
-      </button>
-      <button @click="decrease">
-        Decrease
-      </button>
-    </div>
-  </div>
-</template>
-
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import { useCounterStore } from '@/store'
-
 
 const router = useRouter()
 const { increase, decrease } = useCounterStore()
@@ -29,7 +9,20 @@ const back = () => {
 }
 </script>
 
-<style lang="scss" scoped>
+<template>
+  <div class="text-center">
+    About Page
+    <br />
+    <br />
+    <button @click="back">Back</button>
+    <div class="my-2 flex gap-2 justify-center">
+      <button @click="increase">Increase</button>
+      <button @click="decrease">Decrease</button>
+    </div>
+  </div>
+</template>
+
+<style scoped>
 button {
   @apply py-2 px-4;
   @apply capitalize;
