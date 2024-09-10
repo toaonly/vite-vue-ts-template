@@ -7,7 +7,7 @@ export default defineConfig({
   },
   plugins: [...(viteConfigDefaults.plugins as any)],
   test: {
-    exclude: [...configDefaults.exclude],
+    exclude: [...configDefaults.exclude, 'e2e/**'],
     globals: true,
     environment: 'happy-dom',
   },
